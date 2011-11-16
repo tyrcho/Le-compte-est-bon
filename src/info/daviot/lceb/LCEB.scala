@@ -4,12 +4,12 @@ import util.Random._
 object LCEB {
   def solve(numbers: Seq[Int], target: Int): Option[Graph] = {
     val combinaisons = BinaryTree.allCombinaisons(numbers)
-    (combinaisons.view.par map makePossibleGraphs flatten) find (target == _.eval.getOrElse(0))
+    (combinaisons.view map makePossibleGraphs flatten) find (target == _.eval.getOrElse(0))
   }
 
   def solveAll(numbers: Seq[Int], target: Int): Iterable[Graph] = {
     val combinaisons = BinaryTree.allCombinaisons(numbers)
-    (combinaisons.view.par map makePossibleGraphs flatten) filter (target == _.eval.getOrElse(0)) seq
+    (combinaisons.view map makePossibleGraphs flatten) filter (target == _.eval.getOrElse(0)) seq
   }
 
   private def makePossibleGraphs(tree: BinaryTree[Int]): Seq[Graph] = {
