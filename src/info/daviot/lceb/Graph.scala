@@ -19,7 +19,7 @@ case class Op(a: Graph, b: Graph, operation: Operation) extends Graph {
     }
   }
 
-  override def toString = "(" + a + operation + b + ")"
+  override def toString = format("(%s %s %s) => %s %n", a, operation, b, eval.get)
 
   override def equals(obj: Any): Boolean = {
     obj match {

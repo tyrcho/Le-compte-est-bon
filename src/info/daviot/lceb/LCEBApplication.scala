@@ -11,7 +11,9 @@ class LCEBApplication extends Application {
 
   val inputNumbers = 1 to 6 map inputNumber
   val target = new LabeledField("Cible")
-  val solution = new TextArea
+  val solution = new TextArea {
+    setRows(8)
+  }
 
   var solveButton = new Button("Résoudre", new Button.ClickListener {
     def buttonClick(event: Button#ClickEvent) { solve }
