@@ -1,4 +1,6 @@
 *~
 *.sw?
-bin
 .scala_dependencies
+war/WEB-INF/appengine-generated
+war/WEB-INF/classes
+bin
