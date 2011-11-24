@@ -9,7 +9,7 @@ object UI extends SimpleSwingApplication {
   val solution = new Label
 
   var solveButton = new Button {
-    action = Action("Résoudre") { solve }
+    action = Action("RÃ©soudre") { solve }
   }
 
   def top = new MainFrame {

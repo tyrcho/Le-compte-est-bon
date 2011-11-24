@@ -1,3 +1,10 @@
 Vaadin / Scala / Google appengine project for LCEB
 
-This will be hosted on http://lceb-demo.appspot.com/
+This is hosted on http://lceb-demo.appspot.com/
+
+Ex of result : 
+((25 * (7 * 5) => 35 
+) => 875 
+ + ((8 * 9) => 72 
+ + 6) => 78 
+) => 953 
