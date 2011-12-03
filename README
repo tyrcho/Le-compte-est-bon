@@ -8,3 +8,13 @@ Ex of result :
  + ((8 * 9) => 72 
  + 6) => 78 
 ) => 953 
+
+
+Updated to use Maven.
+After pulling the project, run mvn gae:unpack so as to download Google App SDK.
+Warning, this should be done only once, when recovering the project.
+
+Then, just launch: mvn gae:run to test localy. Please note that on Unix based systems, you'll perhaps need to launch it as root through something like sudo mvn gae:run.
+For deploying the project, just launch mvn gae:deploy.
+
+Tested on MacOSX localy, the project was working fine ;)
