@@ -17,4 +17,94 @@ Warning, this should be done only once, when recovering the project.
 Then, just launch: mvn gae:run to test localy. Please note that on Unix based systems, you'll perhaps need to launch it as root through something like sudo mvn gae:run.
 For deploying the project, just launch mvn gae:deploy.
 
-Tested on MacOSX localy, the project was working fine ;)
+Tested on MacOSX localy, the project was working fine ;) Let me prove it:
+
+***
+$ sudo mvn gae:run
+Password:
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for info.daviot:LCEB:war:1.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 139, column 21
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-surefire-plugin is missing. @ line 147, column 21
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-site-plugin is missing. @ line 154, column 21
+[WARNING] 'build.plugins.plugin.version' for org.scala-tools:maven-scala-plugin is missing. @ line 166, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building LCEB 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] >>> maven-gae-plugin:0.5.6:run (default-cli) @ LCEB >>>
+[INFO] 
+[INFO] --- maven-resources-plugin:2.4.3:resources (default-resources) @ LCEB ---
+[WARNING] Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 6 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ LCEB ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-scala-plugin:2.15.2:compile (default) @ LCEB ---
+[INFO] Checking for multiple versions of scala
+[INFO] includes = [**/*.scala,**/*.java,]
+[INFO] excludes = []
+[INFO] /Users/okidokia/github/Le-compte-est-bon/src/main/scala:-1: info: compiling
+[INFO] Compiling 7 source files to /Users/okidokia/github/Le-compte-est-bon/target/classes at 1322956782302
+[WARNING] warning: there were 1 deprecation warnings; re-run with -deprecation for details
+[WARNING] warning: there were 1 unchecked warnings; re-run with -unchecked for details
+[WARNING] two warnings found
+[INFO] prepare-compile in 0 s
+[INFO] compile in 16 s
+[INFO] 
+[INFO] --- maven-resources-plugin:2.4.3:testResources (default-testResources) @ LCEB ---
+[WARNING] Using platform encoding (MacRoman actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ LCEB ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-scala-plugin:2.15.2:testCompile (default) @ LCEB ---
+[INFO] Checking for multiple versions of scala
+[INFO] includes = [**/*.scala,**/*.java,]
+[INFO] excludes = []
+[INFO] /Users/okidokia/github/Le-compte-est-bon/src/test/scala:-1: info: compiling
+[INFO] Compiling 2 source files to /Users/okidokia/github/Le-compte-est-bon/target/test-classes at 1322956798394
+[INFO] prepare-compile in 0 s
+[INFO] compile in 7 s
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.7.2:test (default-test) @ LCEB ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-war-plugin:2.1.1:war (default-war) @ LCEB ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [LCEB] in [/Users/okidokia/github/Le-compte-est-bon/target/LCEB]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/Users/okidokia/github/Le-compte-est-bon/src/main/webapp]
+[INFO] Webapp assembled in [590 msecs]
+[INFO] Building war: /Users/okidokia/github/Le-compte-est-bon/target/LCEB.war
+[INFO] WEB-INF/web.xml already added, skipping
+[INFO] 
+[INFO] <<< maven-gae-plugin:0.5.6:run (default-cli) @ LCEB <<<
+[INFO] 
+[INFO] --- maven-gae-plugin:0.5.6:run (default-cli) @ LCEB ---
+2011-12-04 01:00:11.228 java[6874:407] [Java CocoaComponent compatibility mode]: Enabled
+2011-12-04 01:00:11.229 java[6874:407] [Java CocoaComponent compatibility mode]: Setting timeout for SWT to 0.100000
+Dec 4, 2011 12:00:13 AM com.google.apphosting.utils.jetty.JettyLogger info
+INFO: Logging to JettyLogger(null) via com.google.apphosting.utils.jetty.JettyLogger
+Dec 4, 2011 12:00:13 AM com.google.apphosting.utils.config.AppEngineWebXmlReader readAppEngineWebXml
+INFO: Successfully processed /Users/okidokia/github/Le-compte-est-bon/target/LCEB/WEB-INF/appengine-web.xml
+Dec 4, 2011 12:00:13 AM com.google.apphosting.utils.config.AbstractConfigXmlReader readConfigXml
+INFO: Successfully processed /Users/okidokia/github/Le-compte-est-bon/target/LCEB/WEB-INF/web.xml
+The server is running at http://localhost:81/
+2011-12-04 01:00:15.931 java[6874:6703] Unable to obtain JNIEnv for context:0
+Dec 4, 2011 12:00:25 AM com.vaadin.terminal.gwt.server.AbstractApplicationServlet checkProductionMode
+WARNING: 
+=================================================================
+Vaadin is running in DEBUG MODE.
+Add productionMode=true to web.xml to disable debug features.
+To show debug window, add ?debug to your application URL.
+=================================================================
