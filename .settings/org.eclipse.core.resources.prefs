@@ -1,3 +1,5 @@
-#Mon Nov 21 21:22:11 CET 2011
+#Fri Dec 16 22:37:06 CET 2011
 eclipse.preferences.version=1
-encoding/<project>=UTF-8
+encoding//src/main/resources=UTF-8
+encoding//src/main/scala=UTF-8
+encoding//src/test/scala=UTF-8
